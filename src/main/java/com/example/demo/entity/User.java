@@ -10,7 +10,7 @@ import javax.persistence.*;
 @Table(uniqueConstraints = {
         @UniqueConstraint(name = "学生姓名重复", columnNames = {"stuNo", "name"})
 })
-public class Student {
+public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
@@ -19,5 +19,9 @@ public class Student {
 
     private String email;
 
-    private Integer stuNo;
+    private String ccNumber;
+
+    private String ccExpiration;
+
+    private String ccCVV;
 }
