@@ -8,7 +8,7 @@ import javax.persistence.*;
 @Data
 @Entity
 @Table(uniqueConstraints = {
-        @UniqueConstraint(name = "学生姓名重复", columnNames = {"stuNow", "name"})
+        @UniqueConstraint(name = "学生姓名重复", columnNames = {"stuNo", "name"})
 })
 public class Student {
     @Id
@@ -19,6 +19,5 @@ public class Student {
 
     private String email;
 
-    @Column(name = "stu_no")
-    private Integer stuNow;
+    private Integer stuNo;
 }
